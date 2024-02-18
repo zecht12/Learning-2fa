@@ -14,7 +14,6 @@ export const NewVerificationForm = () => {
     const token = searchParams.get("token");
 
     const onSubmit = useCallback(() =>{
-        if (success || error) return;
         if (!token){
             setError("Token menghilang. Silakan ulangi lagi.");
             return;
@@ -27,7 +26,7 @@ export const NewVerificationForm = () => {
         .catch((err) => {
             setError("Terjadi kesalahan!")
         });
-    },[token, success, error])
+    },[token])
 
     useEffect(()=>{
         onSubmit();
@@ -36,13 +35,8 @@ export const NewVerificationForm = () => {
     return(
         <CardWrapper headerLabel="Confirm your verification!" backButtonHref="/auth/login" backButtonLabel="Back to login">
             <div className="flex items-center justify-center w-full">
-                {!success && !error &&(
-                    <BeatLoader/>
-                )}
-                <FormSuccess message={success} />
-                {!success &&(
-                    <FormError message={error} />
-                )}
+                <BeatLoader/>
+                <FormSuccess message={}
             </div>
         </CardWrapper>
     )

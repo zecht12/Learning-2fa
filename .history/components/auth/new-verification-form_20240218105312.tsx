@@ -40,9 +40,8 @@ export const NewVerificationForm = () => {
                     <BeatLoader/>
                 )}
                 <FormSuccess message={success} />
-                {!success &&(
-                    <FormError message={error} />
-                )}
+                {}
+                <FormError message={error} />
             </div>
         </CardWrapper>
     )
