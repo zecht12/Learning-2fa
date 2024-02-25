@@ -1,0 +1,17 @@
+import RoleGate from "@/components/shared/role-gate";
+import { useCurrentRole } from "@/hooks/use-current-role"
+import { UserRole } from "@prisma/client";
+
+const AdminPage = async () => {
+    const role = useCurrentRole;
+    return (
+        <div className="w-full h-screen">
+            <RoleGate allowedRole={UserRole.ADMIN}>
+                <div>
+                </div>
+            </RoleGate>
+        </div>
+    )
+}
+
+export default AdminPage
