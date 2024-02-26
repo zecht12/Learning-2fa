@@ -166,7 +166,7 @@ const UserEdit = () => {
                                         <div className="space-y-0.5">
                                             <FormLabel>Two Factor Authentication</FormLabel>
                                             <FormDescription>
-                                            Gunakan Two Factor Authentication
+                                            Enable two factor authentication for your account
                                             </FormDescription>
                                         </div>
                                         <FormControl>
