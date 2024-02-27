@@ -2,7 +2,6 @@
 
 import { Dialog,DialogContent,DialogTrigger } from "../ui/dialog";
 import { useRouter } from "next/navigation";
-import { LoginForm } from "./login-form";
 
 interface LoginButtonProps{
     children: React.ReactNode;
@@ -21,9 +20,6 @@ export const LoginButton = ({children, mode="redirect", asChild}:LoginButtonProp
                 <DialogTrigger asChild={asChild}>
                     {children}
                 </DialogTrigger>
-                <DialogContent>
-                    <LoginForm/>
-                </DialogContent>
             </Dialog>
         )
     }

@@ -12,6 +12,7 @@ const HomePaging = () => {
         }
     })
     .then(data => {
+        // Process the response data as needed
         console.log(data);
     })
     .catch(error => {

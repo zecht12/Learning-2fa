@@ -23,7 +23,7 @@ export default function Home() {
             Raise your gaming experience
           </p>
           <div>
-            <LoginButton mode="redirect" asChild>
+            <LoginButton mode="modal">
               <Button variant="secondary" size="xl">
                 Sign in
               </Button>

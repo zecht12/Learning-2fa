@@ -32,7 +32,7 @@ export const LoginForm = () => {
             password: "",
         }
     });
-    const onSubmit = (values: z.infer<typeof LoginSchema>) =>{
+    const onSubmit = (values: z.infer<typeof LoginSchema>, callbackUrl) =>{
         setError("");
         setSuccess("");
         startTransition(()=>{

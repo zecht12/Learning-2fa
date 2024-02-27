@@ -1,7 +1,7 @@
 import React from 'react'
 
 const HomePaging = () => {
-    const apiUrl = 'https://api.waifu.im/tags';
+    const apiUrl = 'https://nekos.best/api/v2/neko';
 
     fetch(apiUrl)
     .then(response => {
@@ -12,6 +12,7 @@ const HomePaging = () => {
         }
     })
     .then(data => {
+        // Process the response data as needed
         console.log(data);
     })
     .catch(error => {
