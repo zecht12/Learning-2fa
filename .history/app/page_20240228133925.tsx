@@ -19,7 +19,7 @@ export default function Home() {
         <h1 className={cn( "text-6xl font-bold text-white drop-shadow-md", font.className,)}>
             Welcome to <span className="text-red-500">ZechtNime</span>
           </h1>
-          <p className="text-white text-lg">
+          <p className="text-white uppercase text-lg">
             Make your dream come true
           </p>
           <div>

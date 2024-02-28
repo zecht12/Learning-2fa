@@ -60,7 +60,7 @@ const Navbar = () => {
                 </div>
                 <div className='flex items-center gap-4'>
                     <div className='hidden md:flex'>
-                        Make your dream come true
+                    Make your dream come trueRaise your gaming experience
                     </div>
                     <div className='gap-3 p-2 md:py-1 md:px-2 border-[1px] border-neutral-300 rounded-full bg-slate-100 flex justify-around items-center shadow-sm shadow-neutral-500'>
                         <Avatar src={user?.image} />

@@ -20,7 +20,7 @@ export default function Home() {
             Welcome to <span className="text-red-500">ZechtNime</span>
           </h1>
           <p className="text-white text-lg">
-            Make your dream come true
+            Make Your dream come true
           </p>
           <div>
             <LoginButton mode="redirect" asChild>

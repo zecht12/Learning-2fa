@@ -19,8 +19,8 @@ export default function Home() {
         <h1 className={cn( "text-6xl font-bold text-white drop-shadow-md", font.className,)}>
             Welcome to <span className="text-red-500">ZechtNime</span>
           </h1>
-          <p className="text-white text-lg">
-            Make your dream come true
+          <p className="text-white text-uppe text-lg">
+            Make Your dream come true
           </p>
           <div>
             <LoginButton mode="redirect" asChild>
