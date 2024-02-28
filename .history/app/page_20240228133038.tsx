@@ -17,7 +17,7 @@ export default function Home() {
           <Image src="/favicon.ico" alt="image" width={200} height={200} className='rounded-full shadow-xl shadow-neutral-500' />
         </div>
         <h1 className={cn( "text-6xl font-bold text-white drop-shadow-md", font.className,)}>
-            Welcome to <span className="text-red-500">zechtNime</span>
+            Welcome to <span className="text-red-500">zecht</span>
           </h1>
           <p className="text-white text-lg">
             Raise your gaming experience
