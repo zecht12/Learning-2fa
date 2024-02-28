@@ -8,7 +8,7 @@ export const sendTwoFactorEmail = async (
     token: string
 ) => {
     await resend.emails.send({
-        from: "mail@zechtnime.site",
+        from: "onboarding@resend.dev",
         to: email,
         subject: "2FA code",
         html: `<p>Here your 2FA code: ${token}</p>`
@@ -21,7 +21,7 @@ export const sendPasswordResetEmail = async (
     ) => {
     const confirmLink = `${domain}/auth/new-password?token=${token}`;
     await resend.emails.send({
-        from: "mail@zechtnime.site",
+        from: "onboarding@resend.dev",
         to: email,
         subject: "Reset your password",
         html: `<p>Click <a href="${confirmLink}">here</a> to confirm email.</p>`
