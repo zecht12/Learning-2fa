@@ -54,7 +54,7 @@ const Navbar = () => {
                     <Link href="/home" className='flex items-center gap-3'>
                         <Image src="/images/logo.jpg" alt="image" width={40} height={40} className='rounded-full' />
                         <p className={cn( "text-red-500 font-outline-1 md:text-2xl", font.className,)}>
-                            ZechtNime
+                        
                         </p>
                     </Link>
                 </div>
