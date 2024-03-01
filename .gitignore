@@ -3,7 +3,6 @@
 # dependencies
 /node_modules
 /.pnp
-/.history
 .pnp.js
 .yarn/install-state.gz
 
@@ -36,3 +35,5 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 .env
+/.history
+.history
