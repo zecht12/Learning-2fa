@@ -19,7 +19,7 @@ import { UserRole } from '@prisma/client';
 import { useSession } from 'next-auth/react';
 import { CldUploadButton, CloudinaryUploadWidgetResults } from 'next-cloudinary';
 import Image from 'next/image';
-import { GrCloudUpload } from "react-icons/gr";
+import { FaRegImage } from 'react-icons/fa';
 
 const UserEdit = () => {
     const user = useCurrentUser();
@@ -75,7 +75,7 @@ const UserEdit = () => {
     }
 
     return (
-        <div className={`bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-slate-800 to-zinc-900 ${user?.role === "USER" && user?.isOAuth === true && "w-full h-screen"} ${user?.role === "USER" && user?.isOAuth === false && "w-full h-auto"} ${user?.role === "ADMIN" && user?.isOAuth === true && "w-full h-screen"} ${user?.role === "ADMIN" && user?.isOAuth === false && "w-full h-auto"} md:py-10 py-14 px-4 flex items-center justify-center`}>
+        <div className={`h-auto w-full bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] ${user?.role === "ADMIN" && user?.isOAuth === true && "w-full h-screen "} from-slate-800 to-zinc-900 py-10 flex items-center justify-center`}>
             <Card className="w-[600px]">
                 <CardHeader>
                     <p className="text-2xl font-semibold text-center">
@@ -87,26 +87,11 @@ const UserEdit = () => {
                         <form  className="space-y-6"  onSubmit={form.handleSubmit(onSubmit)} >
                             <div className="space-y-4">
                                 <CldUploadButton uploadPreset="aoks0xlu" className={`relative h-[300px] w-full`} onUpload={handleImageUpload}>
-                                    <div className="absolute inset-0 flex flex-col items-center justify-center gap-6">
+                                    <div className="absolute inset-0 flex flex-col items-center justify-center">
                                         {imageUrl ? (
                                             <Image src={imageUrl} width={300} height={300} className="w-full h-[300px]" alt="Uploaded" />
                                         ) : (
-                                            <>
-                                                <div className="cursor-default flex flex-col items-center justify-center gap-2">
-                                                    <GrCloudUpload size={30} className='text-gray-700' />
-                                                    <div>
-                                                        <p className="text-gray-700 text-base font-semibold">
-                                                            Drag photo here
-                                                        </p>
-                                                        <p className="text-gray-700 text-sm">
-                                                            jpg, png, jpeg
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                                <Button asChild variant="default" size="lg">
-                                                    <p>Upload Image</p>
-                                                </Button>
-                                            </>
+                                            <FaRegImage size={30} />
                                         )}
                                     </div>
                                 </CldUploadButton>
