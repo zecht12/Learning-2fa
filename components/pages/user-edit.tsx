@@ -86,30 +86,32 @@ const UserEdit = () => {
                     <Form {...form}>
                         <form  className="space-y-6"  onSubmit={form.handleSubmit(onSubmit)} >
                             <div className="space-y-4">
-                                <CldUploadButton uploadPreset="aoks0xlu" className={`relative h-[300px] w-full`} onUpload={handleImageUpload}>
-                                    <div className="absolute inset-0 flex flex-col items-center justify-center gap-6">
-                                        {imageUrl ? (
-                                            <Image src={imageUrl} width={300} height={300} className="w-full h-[300px]" alt="Uploaded" />
-                                        ) : (
-                                            <>
-                                                <div className="cursor-default flex flex-col items-center justify-center gap-2">
-                                                    <GrCloudUpload size={30} className='text-gray-700' />
-                                                    <div>
-                                                        <p className="text-gray-700 text-base font-semibold">
-                                                            Drag photo here
-                                                        </p>
-                                                        <p className="text-gray-700 text-sm">
-                                                            jpg, png, jpeg
-                                                        </p>
+                                {user?.isOAuth === false &&(
+                                    <CldUploadButton uploadPreset="aoks0xlu" className={`relative h-[300px] w-full`} onUpload={handleImageUpload}>
+                                        <div className="absolute inset-0 flex flex-col items-center justify-center gap-6">
+                                            {imageUrl ? (
+                                                <Image src={imageUrl} width={300} height={300} className="w-full h-[300px]" alt="Uploaded" />
+                                            ) : (
+                                                <>
+                                                    <div className="cursor-default flex flex-col items-center justify-center gap-2">
+                                                        <GrCloudUpload size={30} className='text-gray-700' />
+                                                        <div>
+                                                            <p className="text-gray-700 text-base font-semibold">
+                                                                Drag photo here
+                                                            </p>
+                                                            <p className="text-gray-700 text-sm">
+                                                                jpg, png, jpeg
+                                                            </p>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <Button asChild variant="default" size="lg">
-                                                    <p>Upload Image</p>
-                                                </Button>
-                                            </>
-                                        )}
-                                    </div>
-                                </CldUploadButton>
+                                                    <Button asChild variant="default" size="lg">
+                                                        <p>Upload Image</p>
+                                                    </Button>
+                                                </>
+                                            )}
+                                        </div>
+                                    </CldUploadButton>
+                                )}
                                 <FormField control={form.control} name="name" render={({ field }) => (
                                     <FormItem>
                                         <FormLabel>Name</FormLabel>
