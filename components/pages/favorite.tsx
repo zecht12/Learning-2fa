@@ -10,7 +10,7 @@ const FavoritePaging = async () => {
     const containerHeight = favorites.length > 4 ? 'auto' : 'screen';
 
     return (
-        <div className={`h-${containerHeight} w-full bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-slate-800 to-zinc-900 py-24 flex item-start justify-center relative`}>
+        <div className={`h-${containerHeight} w-full bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-slate-800 to-zinc-900 py-24 px-4 flex item-start justify-center relative`}>
             <div className="w-full grid md:grid-cols-4 gap-2">
                 {favorites.map((favorite, index) => (
                     <div key={index} className="relative">
