@@ -1,4 +1,3 @@
-'use client'
 import AdminPaging from '@/components/pages/admin'
 import React from 'react'
 
