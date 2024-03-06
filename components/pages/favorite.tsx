@@ -14,7 +14,7 @@ const FavoritePaging = async () => {
             <div className="w-full grid md:grid-cols-4 gap-2">
                 {favorites.map((favorite, index) => (
                     <div key={index} className="relative">
-                        <Image src={favorite?.image ?? ''} width={300} height={300} className='md:w-[450px] w-[200px] md:h-[450px] h-[200px]' alt={`Favorite Image ${index}`} />
+                        <Image src={favorite?.image ?? ''} width={300} height={300} className='md:w-[450px] w-full md:h-[450px] h-[500px]' alt={`Favorite Image ${index}`} />
                     </div>
                 ))}
             </div>
