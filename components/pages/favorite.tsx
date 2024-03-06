@@ -17,7 +17,6 @@ const FavoritePaging = async () => {
                         <Image src={favorite?.image ?? ''} width={300} height={300} className='md:w-[450px] w-full md:h-[450px] h-[500px]' alt={`Favorite Image ${index}`} />
                     </div>
                 ))}
-
             </div>
         </div>
     );
