@@ -1,10 +1,11 @@
-import AdminPaging from "@/components/pages/admin"
+'use client'
+import AdminPaging from '@/components/pages/admin'
+import React from 'react'
 
-
-const AdminPage = async () => {
+const page = () => {
     return (
         <AdminPaging/>
     )
 }
 
-export default AdminPage
+export default page

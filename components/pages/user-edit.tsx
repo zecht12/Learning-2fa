@@ -43,9 +43,7 @@ const UserEdit = () => {
     });
 
     const handleImageUpload = (result: CloudinaryUploadWidgetResults) => {
-        console.log("result: ", result);
         const info = result.info as object;
-
         if ("secure_url" in info && "public_id" in info) {
             const url = info.secure_url as string;
             setImageUrl(url);
@@ -57,8 +55,6 @@ const UserEdit = () => {
         if (imageUrl) {
             values.image = imageUrl;
         }
-
-
         startTransition(() => {
             settings(values)
             .then((data) => {
@@ -92,22 +88,22 @@ const UserEdit = () => {
                                             {imageUrl ? (
                                                 <Image src={imageUrl} width={300} height={300} className="w-full h-[300px]" alt="Uploaded" />
                                             ) : (
-                                                <>
-                                                    <div className="cursor-default flex flex-col items-center justify-center gap-2">
-                                                        <GrCloudUpload size={30} className='text-gray-700' />
-                                                        <div>
-                                                            <p className="text-gray-700 text-base font-semibold">
-                                                                Drag photo here
-                                                            </p>
-                                                            <p className="text-gray-700 text-sm">
-                                                                jpg, png, jpeg
-                                                            </p>
-                                                        </div>
+                                            <>
+                                                <div className="cursor-default flex flex-col items-center justify-center gap-2">
+                                                    <GrCloudUpload size={30} className='text-gray-700' />
+                                                    <div>
+                                                        <p className="text-gray-700 text-base font-semibold">
+                                                            Drag photo here
+                                                        </p>
+                                                        <p className="text-gray-700 text-sm">
+                                                            jpg, png, jpeg
+                                                        </p>
                                                     </div>
-                                                    <Button asChild variant="default" size="lg">
-                                                        <p>Upload Image</p>
-                                                    </Button>
-                                                </>
+                                                </div>
+                                                <Button asChild variant="default" size="lg">
+                                                    <p>Upload Image</p>
+                                                </Button>
+                                            </>
                                             )}
                                         </div>
                                     </CldUploadButton>

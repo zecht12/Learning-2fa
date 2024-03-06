@@ -81,3 +81,13 @@ model TwoFactorConfirmation {
 
   @@unique([userId])
 }
+
+model Favorite {
+  id        String   @id @default(cuid())
+  email     String?
+  image     String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@unique([image])
+}

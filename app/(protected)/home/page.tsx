@@ -1,9 +1,6 @@
-"use client";
-
 import HomePaging from "@/components/pages/home";
 
 const Homepage = () => {
-
     return (
         <HomePaging/>
     )

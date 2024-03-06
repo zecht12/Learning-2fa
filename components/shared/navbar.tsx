@@ -48,7 +48,7 @@ const Navbar = () => {
     }
 
     return (
-        <div className=" fixed w-full shadow-xl shadow-slate-600 bg-zinc-200 h-20 z-[100]">
+        <div className=" fixed w-full bg-zinc-300 h-20 z-[100]">
             <div className='flex justify-between items-center w-full h-full px-6 2xl:px-16 '>
                 <div className='flex items-center justify-start'>
                     <Link href="/home" className='flex items-center gap-3'>
@@ -62,7 +62,7 @@ const Navbar = () => {
                     <div className='hidden md:flex'>
                         Make your dream come true
                     </div>
-                    <div className='gap-3 p-2 md:py-1 md:px-2 border-[1px] border-neutral-300 rounded-full bg-slate-100 flex justify-around items-center shadow-sm shadow-neutral-500'>
+                    <div className='gap-3 p-2 md:py-1 md:px-2 border-[1px] border-neutral-300 rounded-full bg-slate-200 flex justify-around items-center shadow-sm shadow-neutral-500'>
                         <Avatar src={user?.image} />
                         <div className="relative">
                             <AiOutlineMenu size={25} onClick={toggleMenu} className="text-black hover:text-blue-600 cursor-pointer" />

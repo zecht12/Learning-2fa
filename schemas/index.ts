@@ -1,6 +1,11 @@
 import * as z from "zod";
 import { UserRole } from "@prisma/client";
 
+export const FavoriteSchema = z.object({
+    email: z.optional(z.string().email()),
+    image: z.optional(z.string().url()),
+})
+
 export const SettingsSchema = z.object({
     name: z.optional(z.string()),
     isTwoFactorEnabled: z.optional(z.boolean()),
@@ -61,6 +66,7 @@ export const RegisterSchema = z.object({
         message: "Minimal 6 karakter",
     }),
     name: z.string().min(1, {
-        message: "Name dibutuhkan",
+        message: "Nama dibutuhkan",
     }),
 });
+

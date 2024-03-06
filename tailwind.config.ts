@@ -1,5 +1,7 @@
 import type { Config } from "tailwindcss"
 
+const { mauve, violet } = require('@radix-ui/colors');
+
 const config = {
   darkMode: ["class"],
   content: [
@@ -19,6 +21,8 @@ const config = {
     },
     extend: {
       colors: {
+        ...mauve,
+        ...violet,
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
