@@ -1,7 +1,7 @@
 import { UserRole, User, Favorite } from '@prisma/client';
 import RoleGate from '@/components/shared/role-gate';
 import { db } from '@/lib/db';
-import { Button } from '../ui/button';
+import { useCurrentRole } from '@/hooks/use-current-role';
 
 const AdminPaging = async () => {
     const fetchedUsers = await db.user.findMany();
