@@ -7,7 +7,7 @@ const FavoritePaging = async () => {
     const user = await currentUser();
     const favorites = await getFavoritesByEmail(user?.email ?? '');
 
-    const containerHeight = favorites.length > 4 ? 'full' : 'screen';
+    const containerHeight = favorites.length > 4 ? 'auto' : 'screen';
 
     return (
         <div className={`h-${containerHeight} w-full bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-slate-800 to-zinc-900 py-24 px-4 flex item-start justify-center relative`}>
