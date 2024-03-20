@@ -1,5 +1,5 @@
 export const getWaifuTag = async () => {
-    const res = await fetch('https://api.waifu.im/tag');
+    const res = await fetch('https://api.waifu.im/tags');
     return res.json();
 };
 
