@@ -54,7 +54,7 @@ const ImagePaging = () => {
       const type = tag.endsWith("_sfw") || tag.includes("_sfw") ? "sfw" : "nsfw";
       const category = tag.split("_")[0];
 
-      const response = await getWaifuImage(type, category);
+      const response = await getManyWaifuImages(type, category);
       if (response && response.files) {
         imageData = response.files.map((url: string) => ({ url, tags: [{ name: tag }] }));
         setImages(imageData);
