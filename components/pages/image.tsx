@@ -92,7 +92,7 @@ const ImagePaging = () => {
   };
 
   return (
-    <div className={`h-${selectedTags.length ? 'auto' : 'screen'} w-full bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-slate-800 to-zinc-900 py-24 px-4 flex item-start justify-center relative`}>
+    <div className={`h-${selectedTags.length ? 'full' : 'screen'} w-full bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-slate-800 to-zinc-900 py-24 px-4 flex item-start justify-center relative`}>
       <PopupMessage message={error} type="error" onClose={closeErrorPopup} />
       <PopupMessage message={success} type="success" onClose={closeSuccessPopup} />
       <div className='w-full space-y-6'>
