@@ -14,7 +14,6 @@ export const addFavorite = async (values: z.infer<typeof FavoriteSchema>) => {
     if (!validatedField.success) {
         return{error: "Terjadi kesalahan!"}
     };
-
     const {email, image} = validatedField.data;
     const exitingUser = await getUserByEmail(email??"");
     if (!exitingUser || !exitingUser.email) {
