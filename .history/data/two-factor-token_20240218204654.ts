@@ -1,1 +1,0 @@
-import { Libre_Barcode_128 } from "next/font/google";
