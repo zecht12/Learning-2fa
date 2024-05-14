@@ -89,7 +89,7 @@ The eleventh screenshot displays the "All Favorites" page of ZechtNime. This pag
 
 ## Getting Started
 
-To get started with ZechtNime, visit our [website](https://zechtnime.site) and sign up for an account.
+To get started with ZechtNime, visit our [website](https://zechtnime.site), sign up for an account and many more images.
 
 ## Contributing
 
